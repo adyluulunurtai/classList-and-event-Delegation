@@ -2,9 +2,19 @@ window.addEventListener("DOMContentLoaded", ()=>{
  
  
 let btns = document.querySelectorAll('button');
+let wrapper = document.querySelector(".btn-block");
 
+wrapper.addEventListener("click", (e)=>{
+    if(e.target&& e.target.tagName == "BUTTON"){
+        console.log("pravilno")
+    } else{
+        console.log("nepravilno")
+    }
+});
 
-console.log(btns[0]); 
+const some = document.createElement("button");
+wrapper.append(some);
+
 
 ;
 if(btns[0].classList.contains('blue')){
@@ -22,6 +32,8 @@ btns[0].classList.toggle("blue");
 btns[0].addEventListener("click", (e)=>{
     btns[1].classList.toggle("red");
 })
+
+
 
     
 
